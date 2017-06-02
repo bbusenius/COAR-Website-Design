@@ -1,0 +1,95 @@
+$marketing-site-footer-bg: lighten($black, 20%);
+
+.marketing-site-footer {
+  background: $marketing-site-footer-bg url('https://www.toptal.com/designers/subtlepatterns/patterns/dark_geometric.png');
+  background: $marketing-site-footer-bg url('https://www.toptal.com/designers/subtlepatterns/patterns/crossed_stripes.png');
+  background: $marketing-site-footer-bg;
+  background: darken($marketing-site-footer-bg, 20%) url('/assets/img/gun_metal.png');
+  color: lighten($marketing-site-footer-bg, 40%);
+  padding: 2rem 0 0;
+  font-size: $global-font-size * .9;
+
+  a {
+    color: $white;
+  }
+
+  .column-block {
+    margin-bottom: 30px;
+  }
+
+  > .row {
+    margin-bottom: 1rem;
+    > div.columns:not(:last-child) {
+        border-right: 1px solid lighten($marketing-site-footer-bg, 20%);
+    }
+  }
+
+  @include breakpoint(small only) {
+    .columns {
+      margin-bottom: 2rem;
+    }
+  }
+  sup {
+    small {
+      font-size: rem-calc(14);
+    }  
+  }
+}
+
+.marketing-site-footer-name {
+  color: $white;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.marketing-site-footer-title {
+  color: $white;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.marketing-site-footer-block {
+  display: flex;
+  margin-bottom: 0;
+
+  .fa {
+    font-size: 1.3rem;
+    color: $light-gray;
+  }
+
+  p {
+    margin-left: 1rem;
+    line-height: 1.125rem;
+  }
+}
+
+.marketing-site-footer-bottom {
+  //background: darken($marketing-site-footer-bg, 20%);
+  //background: darken($marketing-site-footer-bg, 20%) url('https://www.toptal.com/designers/subtlepatterns/patterns/dark_geometric.png');
+  //background: darken($marketing-site-footer-bg, 20%) url('https://www.toptal.com/designers/subtlepatterns/patterns/real_cf.png');
+  //background: darken($marketing-site-footer-bg, 20%) url('https://www.toptal.com/designers/subtlepatterns/patterns/triangles.png');
+  //background: darken($marketing-site-footer-bg, 20%) url('https://www.toptal.com/designers/subtlepatterns/patterns/dark_matter.png');
+  background: darken($marketing-site-footer-bg, 20%) url('/assets/img/black_thread.png');
+  padding: 1rem 0;
+
+  p,
+  .menu {
+    margin-bottom: 0;
+  }
+
+  .marketing-site-footer-bottom-links {
+    justify-content: flex-end;
+
+    a {
+      color: lighten($marketing-site-footer-bg, 40%);
+    }
+
+    @include breakpoint(medium down) {
+      justify-content: center;
+    }
+  }
+
+  @include breakpoint(medium down) {
+    text-align: center;
+  }
+}

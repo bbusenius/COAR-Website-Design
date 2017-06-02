@@ -1,0 +1,82 @@
+<div class="multilevel-offcanvas off-canvas position-left" id="offCanvasRight" data-off-canvas>
+  <ul class="vertical menu">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Resources</a></li>
+  </ul>
+  <ul class="vertical menu" data-accordion-menu>
+    <li><a href="#">Our Work</a>
+      <ul class="menu vertical nested">
+        <li><a href="#">Research</a></li>
+        <li><a href="#">Analysis</a></li>
+        <li><a href="#">Operations</a></li>
+       </ul>
+    </li>
+    <li><a href="#">Our Team</a></li>
+   </ul>
+  <ul class="vertical menu">
+     <li><a href="#">Events</a></li>
+     <li><a href="#">News</a></li>
+   </ul>
+  <ul class="vertical menu">
+     <li><a href="#">Collaborate</a></li>
+     <li><a href="/join.html">Join COAR</a></li>
+     <li><a href="#">Contact</a></li>
+   </ul>
+  <ul class="menu simple social-links">
+    <li><a href="#" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+    <li><a href="#" target="_blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+    <li><a href="#" target="_blank"><i class="fa fa-github-square" aria-hidden="true"></i></a></li>
+  </ul>
+  <form>
+    <div class="input-group">
+    <input class="input-group-field" placeholder="Search..." type="text">
+    <div class="input-group-button">
+      <input class="button" value="Search" type="submit">
+    </div>
+   </div><!--/.input-group-->
+  </form>
+</div>
+
+<div class="off-canvas-content bt" data-off-canvas-content>
+  <div class="nav-bar row">
+      <!--<div class="nav-bar-left columns"><span id="logo">[COAR] <sup class="subheader"><small>at Argonne National Laboratory</small></sup></span></div>-->
+      <div class="nav-bar-right">
+        <ul class="menu">
+          <li>
+            <button class="offcanvas-trigger" type="button" data-open="offCanvasRight">
+              <span class="offcanvas-trigger-text hide-for-small-only">Menu</span>
+              <div class="hamburger">
+                <span class="line"></span>
+                <span class="line"></span>
+                <span class="line"></span>
+              </div>
+            </button>
+          </li>
+<li class="hide-for-small-only"><a href="#">Home</a></li>
+<li class="hide-for-small-only"><a href="#">Our Work</a></li>
+<li class="hide-for-small-only"><a href="#">Events</a></li>
+<li class="hide-for-small-only"><a href="#">News</a></li>
+<li class="hide-for-small-only"><a href="#">Collaborate</a></li>
+<li class="hide-for-small-only"><a href="/join.html">Join COAR</a></li>
+<li class="hide-for-small-only"><a href="#test">Resources</a></li>
+<li class="hide-for-small-only"><a href="#">Our Team</a></li>
+<li class="hide-for-small-only"><a href="#">Contact</a></li>
+<li class="hide-for-small-only"><a href="#" id="search-web-btn" data-toggle="search-web search-web-btn slides" data-toggler=".bg-primary"><i class="fa fa-search" aria-hidden="true"></i></a></li>
+        </ul>
+    </div>
+  </div>
+ </div>
+<div id="search-web-wrapper" class="row" >
+  <div id="search-web" class="hide" data-toggler=".hide">
+    <div class="small-12 columns">
+        <form>
+          <div class="input-group">
+            <input class="input-group-field"  type="text" placeholder="Search...">
+            <div class="input-group-button">
+              <input type="submit" class="button" value="Search"/>
+            </div>
+           </div><!--/.input-group-->
+        </form>
+    </div>
+  </div>
+</div><!--/#search-web-wrapper-->

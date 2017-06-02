@@ -1,0 +1,87 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cyber Operations, Analysis, and Research (COAR) at Argonne National Laboratory</title>
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+
+    <style>
+        .full-width-testimonial {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1)), url("assets/img/2711081060_ba91f69796_b.jpg");
+        }
+    </style>
+  </head>
+  <body>
+    {{> header }}
+
+    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+    {{> body}}
+
+    <footer class="marketing-site-footer">
+      <div class="row medium-unstack">
+        <div class="medium-4 columns">
+          <h4 class="marketing-site-footer-name">
+            <span>[COAR] <sup class="subheader"><small>at Argonne National Laboratory</small></sup></span>
+          </h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita dolorem accusantium architecto id quidem, itaque nesciunt quam ducimus atque.</p>
+          <ul class="menu marketing-site-footer-menu-social simple">
+            <li><a href="#"><i class="fa fa-youtube-square fa-2x" aria-hidden="true"></i></a></li>
+             <li><a href="#"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i></a></li>
+             <li><a href="#"><i class="fa fa-twitter-square fa-2x" aria-hidden="true"></i></a></li>
+             <li><a href="#"><i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a></li>
+          </ul>
+        </div>
+        <div class="medium-4 columns text-center">
+          <h4 class="marketing-site-footer-title">Contact</h4>
+          <!--<div class="marketing-site-footer-block">
+            <i class="fa fa-map-marker" aria-hidden="true"></i>
+            <p>9700 S. Cass Avenue<br/>Argonne, IL 60439</p>
+          </div>
+          <div class="marketing-site-footer-block">
+            <a href="#"><i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+            <p><a href="#">Email Us</a></p>
+          </div>-->
+          <div class="marketing-site-footer-bloc contact-block">
+            <p>Let COAR at Argonne National Laboratory help you with your cyber-security research.</p>
+            <a href="#" class="hollow button white">Contact Us <i class="fa fa-envelope-o" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="medium-4 columns">
+          <h4 class="marketing-site-footer-title">This site runs on</h4>
+          <div class="">
+            <img src="assets/img/more-mtd.gif" alt="more mtd"/>
+            <p>This site runs on our patented <a href="http://ieeexplore.ieee.org/xpls/icp.jsp?arnumber=6900086">more mtd</a> technology.  The previous live host was:</p>
+            <div id="more-mtd-content">
+                <span class="host">CentOS
+                </span><br><span class="host">→ Debian
+                </span><br><span class="live host">OpenSUSE
+                </span><br>
+            </div><!--/.more-mtd-content-->
+          </div>
+        </div>
+      </div>
+      <div class="marketing-site-footer-bottom">
+        <div class="row large-unstack align-middle">
+          <div class="column">
+            <p>&copy; 2017 Cyber Operations, Analysis, and Research</p>
+          </div>
+          <div class="column">
+            <ul class="menu marketing-site-footer-bottom-links">
+              <li><a href="#">Our Work</a></li>
+              <li><a href="#">News</a></li>
+              <li><a href="#">Collaborate</a></li>
+              <li><a href="/join.html">Join COAR</a></li>
+              <li><a href="#">Resources</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="{{root}}assets/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,330 @@
+// Variables
+// ---------
+$row-margin: rem-calc(30);
+$col-top-bottom-padding: rem-calc(map-get($grid-column-gutter, medium)) / 2;
+$page-border: 1px solid lighten($black, 85%); 
+
+// Spacing classes
+// ---------------
+.p15 {
+    padding: rem-calc(15);
+}
+.pb0 {
+    padding-bottom: 0 !important;
+}
+.pt0 {
+    padding-top: 0 !important;
+}
+.pt10 {
+    padding-top: rem-calc(10) !important;
+}
+.pt15 {
+    padding-top: rem-calc(15) !important;
+}
+.mb0 {
+    margin-bottom: 0 !important;
+}
+.mb15 {
+    margin-bottom: rem-calc(15) !important;
+}
+.mb20 {
+    margin-bottom: rem-calc(20) !important;
+}
+.mt0 {
+    margin-top: 0 !important;
+}
+.mt10 {
+    margin-top: rem-calc(10) !important;
+}
+.mt20 {
+    margin-top: rem-calc(20) !important;
+}
+
+// Border classes
+// --------------
+.bt {
+    border-top: $page-border !important;
+}
+
+// General
+// -------
+body {
+    //background: $light-gray;
+    //background: $light-gray url("https://www.toptal.com/designers/subtlepatterns/patterns/hexellence.png");
+    //background: $light-gray url("https://www.toptal.com/designers/subtlepatterns/patterns/cubes.png");
+    background: $light-gray url("/assets/img/struckaxiom.png");
+    p {
+        a {
+            text-decoration: underline;
+        }
+    }
+}
+.main-wrapper {
+    >.row {
+        background: $white;
+        //margin-bottom: $row-margin;
+        border-top: 0;
+        border-bottom: 0;
+        border-left: $page-border;
+        border-right: $page-border;
+        &:last-child {
+            border-bottom: $page-border;
+        }
+        &:first-child {
+            border-top: $page-border;
+            @include breakpoint(large up) {
+                margin-top: $row-margin;
+            }
+        }
+        >.columns {
+            padding-top: $col-top-bottom-padding;
+            padding-bottom: $col-top-bottom-padding;
+        }
+        >.columns.pb0 {
+            @extend .pb0;
+        }
+    }
+}
+.main-wrapper {
+    h1 {
+        color: $secondary-color;
+        border-bottom: 2px solid $secondary-color;
+        font-weight: bold;
+        line-height: rem-calc(35);
+    }
+    h2 {
+        $h2-color: lighten($black, 45%);
+        color: $h2-color;
+        font-weight: bold;
+        margin-bottom: rem-calc(1.5);
+    }
+}
+.bg-primary {
+    background: $primary-color;
+}
+.bg-secondary {
+    background: $secondary-color;
+}
+.bg-success {
+    background: $success-color;
+}
+.bg-warning {
+    background: $warning-color;
+}
+.bg-alert {
+    background: $alert-color;
+}
+.bg-purple {
+    background: get-color(purple);
+}
+.bg-black {
+    background: $black;
+}
+.bg-dark-gray {
+    background: $dark-gray;
+}
+.bg-light-gray {
+    background: $light-gray !important;
+}
+.bg-sidebar-default {
+    background: $white;
+}
+.gun-metal {
+    background: lighten($black, 30%) url('/assets/img/gun_metal.png');
+}
+.inverse {
+    h2 {
+        color: $white;
+    }
+}
+
+// Buttons
+// -------
+.hollow.white {
+    color: $white;
+    border: 1px solid $white;
+    &:hover {
+        $hollow-hover-color: rgba(0,0,0,.7);
+        background: $white;
+        color: $hollow-hover-color;
+        border: 1px solid $hollow-hover-color;
+    }
+}
+
+
+// Header elements
+// ---------------
+#logo {
+    font-size: $global-font-size * 2.1;
+    font-weight: bold;
+    color: $black;
+    sup {
+        small {
+            font-weight: normal;
+            font-size: $global-font-size *.6;
+        }
+    }
+}
+#tagline {
+    font-size: $global-font-size * 1.4;
+}
+header {
+    .text-right {
+        @include breakpoint(small down) {
+            display: none;
+        }
+    }
+    #argonne-logo {
+        padding: 10px;
+        img {
+            min-width: 75px;
+            height: 45px;
+            max-width: none;
+        }
+    }
+}
+
+// Main navigation
+// ---------------
+.off-canvas-content {
+    background: $white;
+    border-bottom: rem-calc(7) solid $primary-color;
+}
+#search-web-wrapper {
+    position: relative;
+    #search-web {
+        position: absolute;
+        z-index: 3;
+        background: $primary-color;
+        padding-top: rem-calc(15) ;
+        width: 100%;
+        .button {
+            background: lighten($black, 30%);
+        }
+    }
+}
+.menu {
+    a.bg-primary {
+        color: $white;
+    }
+}
+
+// Carousel
+// --------
+.orbit-previous,
+.orbit-next {
+    cursor: pointer;
+}
+.fullscreen-image-slider.fake-modal {
+    button {
+        opacity: 0.4;
+    }
+    li.is-active  {
+        background-color: $black;
+        img, h1, p, a, button {
+            opacity: 0.5;
+        }
+    }
+}
+.fullscreen-image-slider {
+    .shadow {
+        display: block;
+        height: 40%;
+        width: 100%;
+        position: absolute;
+        //@include gradient(rgba(0,0,0,.7), rgba(0,0,0,0), 'vertical');
+        z-index: 1;
+    }
+    figcaption {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, .8);
+        z-index: 2;
+        @include breakpoint(medium up) {
+            padding: 0 10%;
+        }
+        @include breakpoint(large up) {
+            padding: 0 20%;
+        }
+    }
+    .orbit-container {
+        $max-slide-height: 550px;
+        max-height: $max-slide-height;
+        .orbit-slide {
+            max-height: $max-slide-height;
+            background-color: lighten($black, 10%);
+            img {
+                opacity: 0.9;
+            }
+        }
+    }
+}
+
+// Sidebar
+// -------_
+.sidebar {
+    border-left: $page-border;
+    h2 {
+        font-size: $global-font-size * 1.2;
+    }
+    .widget {
+        margin-bottom: rem-calc(20);
+    }
+}
+
+// Upcoming events widget
+// ----------------------
+.widget.events {
+    h2 {
+        margin-bottom: 0;
+        background: lighten($black, 30%);
+        color: $white;
+        padding: rem-calc(10) 0;
+    }
+    dl {
+        background: darken($light-gray, 2%);
+        line-height: $global-lineheight * .9;
+        dt, dd {
+            padding: 0 rem-calc(40);
+        }
+        dt {
+            margin-bottom: 0;
+            padding-top: rem-calc(10);
+        }
+        .stripe {
+            background-color: $white;
+        }
+        dd {
+            margin-bottom: rem-calc(10);
+            padding-bottom: rem-calc(10);
+            &:last-child {
+                margin-bottom: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+    .events-time:before {
+        content: '| ';
+    }
+}
+
+// Full-width case study testimonial
+// ---------------------------------
+.full-width-testimonial {
+    color: $white;
+    background-size: cover;
+    .full-width-testimonial-footer {
+        background: $secondary-color;
+        padding: rem-calc(5) 0;
+        a {
+            color: $white;
+        }
+    }
+}
+
+
+// Footer
+// ------
+footer {
+    @include breakpoint(large up) {
+        margin-top: $row-margin;
+    }
+}

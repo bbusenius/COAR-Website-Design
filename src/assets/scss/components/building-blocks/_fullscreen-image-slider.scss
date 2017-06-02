@@ -1,0 +1,27 @@
+.fullscreen-image-slider {
+    .orbit-caption {
+        bottom: 50%;
+        transform: translateY(50%);
+        background: none;
+        text-align: center;
+        color: $white;
+        h1 {
+            $relation: 1.6px;
+            font-weight: bold;
+            font-size: rem-calc(map-get(map-get(map-get($header-styles, "small"), "h1"), "font-size") * $relation);
+            @include breakpoint(medium){
+                font-size: rem-calc(map-get(map-get(map-get($header-styles, "medium"), "h1"), "font-size") * $relation);
+            }
+        }
+        .lead {
+            @include breakpoint(small){
+                font-size: $lead-font-size * .9;
+                line-height: $lead-lineheight * .8;
+            }
+            @include breakpoint(xlarge){
+                font-size: $lead-font-size;
+                line-height: $lead-lineheight;
+            }
+        }
+    }
+}
