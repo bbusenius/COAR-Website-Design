@@ -58,7 +58,7 @@ body {
     //background: $light-gray;
     //background: $light-gray url("https://www.toptal.com/designers/subtlepatterns/patterns/hexellence.png");
     //background: $light-gray url("https://www.toptal.com/designers/subtlepatterns/patterns/cubes.png");
-    background: $light-gray url("/assets/img/struckaxiom.png");
+    background: $light-gray url("../../assets/img/struckaxiom.png");
     p {
         a {
             text-decoration: underline;
@@ -136,7 +136,7 @@ body {
     background: $white;
 }
 .gun-metal {
-    background: lighten($black, 30%) url('/assets/img/gun_metal.png');
+    background: lighten($black, 30%) url('../../assets/img/gun_metal.png');
 }
 .inverse {
     h2 {

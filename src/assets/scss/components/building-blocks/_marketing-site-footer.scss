@@ -4,7 +4,7 @@ $marketing-site-footer-bg: lighten($black, 20%);
   background: $marketing-site-footer-bg url('https://www.toptal.com/designers/subtlepatterns/patterns/dark_geometric.png');
   background: $marketing-site-footer-bg url('https://www.toptal.com/designers/subtlepatterns/patterns/crossed_stripes.png');
   background: $marketing-site-footer-bg;
-  background: darken($marketing-site-footer-bg, 20%) url('/assets/img/gun_metal.png');
+  background: darken($marketing-site-footer-bg, 20%) url('../../assets/img/gun_metal.png');
   color: lighten($marketing-site-footer-bg, 40%);
   padding: 2rem 0 0;
   font-size: $global-font-size * .9;
@@ -69,7 +69,7 @@ $marketing-site-footer-bg: lighten($black, 20%);
   //background: darken($marketing-site-footer-bg, 20%) url('https://www.toptal.com/designers/subtlepatterns/patterns/real_cf.png');
   //background: darken($marketing-site-footer-bg, 20%) url('https://www.toptal.com/designers/subtlepatterns/patterns/triangles.png');
   //background: darken($marketing-site-footer-bg, 20%) url('https://www.toptal.com/designers/subtlepatterns/patterns/dark_matter.png');
-  background: darken($marketing-site-footer-bg, 20%) url('/assets/img/black_thread.png');
+  background: darken($marketing-site-footer-bg, 20%) url('../../assets/img/black_thread.png');
   padding: 1rem 0;
 
   p,
