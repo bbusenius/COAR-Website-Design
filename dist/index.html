@@ -17,7 +17,7 @@
   <body>
     <header>
       <div class="row align-middle">
-        <div class="small-12 medium-8 columns">
+        <div class="small-12 medium-8 columns pl10">
           <a href="index.html"><span id="logo">[COAR] <sup class="subheader"><small>at Argonne National Laboratory</small></sup></span></a>
         </div>
         <div id="argonne-logo" class="small-12 medium-4 columns text-right">
@@ -69,8 +69,8 @@
       <div class="nav-bar row">
           <!--<div class="nav-bar-left columns"><span id="logo">[COAR] <sup class="subheader"><small>at Argonne National Laboratory</small></sup></span></div>-->
           <div class="nav-bar-right">
-            <ul class="menu">
-              <li>
+            <ul class="menu dropdown" data-dropdown-menu data-options="disableHover:true;clickOpen:true">
+              <li class="show-for-small-only">
                 <button class="offcanvas-trigger" type="button" data-open="offCanvasRight">
                   <span class="offcanvas-trigger-text hide-for-small-only">Menu</span>
                   <div class="hamburger">
@@ -80,8 +80,15 @@
                   </div>
                 </button>
               </li>
-    <li class="hide-for-small-only"><a href="index.html">Home</a></li>
-    <li class="hide-for-small-only"><a href="#">Our Work</a></li>
+    <li class="hide-for-small-only"><a class="pl10" href="index.html">Home</a></li>
+    <li class="hide-for-small-only is-dropdown-submenu-parent"><a href="#">Our Work</a>
+        <ul class="menu">
+          <li><a href="research.html">Research</a></li>
+          <li><a href="#">Analysis</a></li>
+          <li><a href="#">Operations</a></li>
+        </ul>
+    
+    </li>
     <li class="hide-for-small-only"><a href="#">Events</a></li>
     <li class="hide-for-small-only"><a href="#">News</a></li>
     <li class="hide-for-small-only"><a href="#">Collaborate</a></li>
@@ -111,7 +118,7 @@
     
     
 
-    <div id="slides" data-toggler=".fake-modal" class="fullscreen-image-slider">
+    <div id="slides" class="fullscreen-image-slider" data-toggler=".fake-modal">
       <div class="orbit" role="region" aria-label="FullScreen Pictures" data-orbit data-auto-play>
         <span class="shadow"></span>
         <ul class="orbit-container">
@@ -161,13 +168,19 @@
     <div class="bg-sidebar-default sidebar small-12 large-4 columns pb0">
     <div class="widget events">
       <h2 class="text-center">Upcoming Events <i class="fa fa-calendar" aria-hidden="true"></i></h2>
-          <dl>
-            <dt class="stripe"><a href="#">Cyber Analysis Training Course</a></dt>
-            <dd class="stripe"><span class="events-date">May 1, 2017</span> <span class="events-time">1:00pm</span></dd>
-            <dt><a href="#">Cyber Analysis Training Course</a></dt>
-            <dd><span class="events-date">May 22, 2017</span> <span class="events-time">2:00pm</span></dd>
-            <dt class="stripe"><a href="#">Cyber Analysis Training Course</a></dt>
-            <dd class="stripe"><span class="events-date">July 10, 2017</span> <span class="events-time">10:00am</span></dd>
+          <dl class="mb0">
+            <div class="stripe hover">
+              <dt><a href="#">Cyber Analysis Training Course</a></dt>
+              <dd><span class="events-date">May 1, 2017</span> <span class="events-time">1:00pm</span></dd>
+            </div>
+            <div class="hover">
+              <dt><a href="#">Cyber Analysis Training Course</a></dt>
+              <dd><span class="events-date">May 22, 2017</span> <span class="events-time">2:00pm</span></dd>
+            </div>
+            <div class="stripe hover">
+              <dt><a href="#">Cyber Analysis Training Course</a></dt>
+              <dd><span class="events-date">July 10, 2017</span> <span class="events-time">10:00am</span></dd>
+            </div>
           </dl>
           <a href="#" class="button expanded">Go to calendar <i class="fa fa-angle-right" aria-hidden="true"></i></a>
         </div><!--/.widget-->
@@ -201,7 +214,7 @@
                     <div class="small-profile-pic show-for-small-only">
                      <a href="#"><img src="http://placekitten.com/g/50/50"></a>
                     </div>
-                    <p class="testimonial-slide-author-info">Emily Shemon<br><i class="subheader">Department of Energy</i></p>
+                    <p class="testimonial-slide-author-info">Allison Jenson<br><i class="subheader">Department of Energy</i></p>
                   </div>
                 </div>
               </div>
@@ -224,7 +237,7 @@
                     <div class="small-profile-pic show-for-small-only">
                      <a href="#"><img src="http://placekitten.com/g/50/50"></a>
                     </div>
-                    <p class="testimonial-slide-author-info">Neeraj Shidore<br><i class="subheader">The University of Chicago</i></p>
+                    <p class="testimonial-slide-author-info">Ajith Jhadav<br><i class="subheader">The University of Chicago</i></p>
                   </div>
                 </div>
               </div>
@@ -247,7 +260,7 @@
                     <div class="small-profile-pic show-for-small-only">
                       <a href="#"><img src="http://placekitten.com/g/50/50"></a>
                     </div>
-                    <p class="testimonial-slide-author-info">Craig Patterson<br><i class="subheader">University of Texas</i></p>
+                    <p class="testimonial-slide-author-info">Thaddeus Bullard<br><i class="subheader">University of Texas</i></p>
                   </div>
                 </div>
               </div>

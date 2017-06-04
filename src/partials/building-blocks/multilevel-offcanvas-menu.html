@@ -41,8 +41,8 @@
   <div class="nav-bar row">
       <!--<div class="nav-bar-left columns"><span id="logo">[COAR] <sup class="subheader"><small>at Argonne National Laboratory</small></sup></span></div>-->
       <div class="nav-bar-right">
-        <ul class="menu">
-          <li>
+        <ul class="menu dropdown" data-dropdown-menu data-options="disableHover:true;clickOpen:true">
+          <li class="show-for-small-only">
             <button class="offcanvas-trigger" type="button" data-open="offCanvasRight">
               <span class="offcanvas-trigger-text hide-for-small-only">Menu</span>
               <div class="hamburger">
@@ -52,8 +52,15 @@
               </div>
             </button>
           </li>
-<li class="hide-for-small-only"><a href="index.html">Home</a></li>
-<li class="hide-for-small-only"><a href="#">Our Work</a></li>
+<li class="hide-for-small-only"><a class="pl10" href="index.html">Home</a></li>
+<li class="hide-for-small-only is-dropdown-submenu-parent"><a href="#">Our Work</a>
+    <ul class="menu">
+      <li><a href="research.html">Research</a></li>
+      <li><a href="#">Analysis</a></li>
+      <li><a href="#">Operations</a></li>
+    </ul>
+
+</li>
 <li class="hide-for-small-only"><a href="#">Events</a></li>
 <li class="hide-for-small-only"><a href="#">News</a></li>
 <li class="hide-for-small-only"><a href="#">Collaborate</a></li>

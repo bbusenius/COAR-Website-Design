@@ -21,6 +21,12 @@ $page-border: 1px solid lighten($black, 85%);
 .pt15 {
     padding-top: rem-calc(15) !important;
 }
+.pl0 {
+    padding-left: 0 !important;
+}
+.pl10 {
+    padding-left: rem-calc(10) !important;
+}
 .mb0 {
     margin-bottom: 0 !important;
 }
@@ -198,14 +204,46 @@ header {
         background: $primary-color;
         padding-top: rem-calc(15) ;
         width: 100%;
+        box-shadow: rem-calc(1) rem-calc(8) rem-calc(10) rgba(0,0,0,.3);
         .button {
             background: lighten($black, 30%);
         }
     }
 }
-.menu {
+.dropdown.menu {
     a.bg-primary {
         color: $white;
+        &:hover {
+            background: $primary-color !important;
+        }
+    }
+    li.is-active > a,
+    li:hover > a,
+    a:hover {
+        color: $white;
+        background: $primary-color;
+        &:after {
+            border-color: $white transparent transparent;
+        }
+    }
+}
+
+// Images and figures
+// ------------------
+
+figure.caption-right {
+    overflow: auto;
+    padding: 1.5rem rem-calc(20) 1.5rem rem-calc(20);
+    border-bottom: $page-border;
+    &:nth-child(odd) {
+        background: $light-gray;
+    }
+    &:last-child {
+        border-bottom: none;
+    }
+    img {
+        float: left;
+        margin: rem-calc(1) 1rem 0 rem-calc(1);
     }
 }
 
@@ -280,31 +318,37 @@ header {
         padding: rem-calc(10) 0;
     }
     dl {
-        background: darken($light-gray, 2%);
         line-height: $global-lineheight * .9;
-        dt, dd {
-            padding: 0 rem-calc(40);
+        div {
+            background: darken($light-gray, 2%);
+            padding: rem-calc(15) rem-calc(40);
+            &:last-child {
+                margin-bottom: 0;
+            }
         }
         dt {
             margin-bottom: 0;
-            padding-top: rem-calc(10);
         }
         .stripe {
             background-color: $white;
-        }
-        dd {
-            margin-bottom: rem-calc(10);
-            padding-bottom: rem-calc(10);
-            &:last-child {
-                margin-bottom: 0;
-                padding-bottom: 0;
-            }
         }
     }
     .events-time:before {
         content: '| ';
     }
 }
+
+// Utility
+.hover {
+    &:hover {
+        background: lighten($warning-color, 43%) !important;
+        cursor: pointer;
+        a {
+            color: lighten($black, 30%);
+        }
+    }
+}
+
 
 // Full-width case study testimonial
 // ---------------------------------
